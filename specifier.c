@@ -15,6 +15,7 @@ int (*get_specifier(char *s))(va_list)
 		{"b", print_binary},
 		{"s", print_string},
 		{"S", print_S},
+		{"r", print_rev},
 		{"%", print_percent},
 		{NULL, NULL},
 	};
