@@ -43,31 +43,3 @@ int print_rev(va_list ap)
 	return (num_of_bytes);
 }
 
-/**
- * print_rot13 - prints rot13 crypt
- * @ap: args
- * Return: num of bytes
- */
-
-int print_rot13(va_list ap)
-{
-	char rot13[] =
-		"NOPQRSTUVQXYZABCDEFGHIJKLM       nopqrstuvwxyzabcdefghijklm";
-	char *str = va_arg(ap, char *);
-	int str_i = 0, rot_i = 0, num_of_bytes = 0;
-
-	while (str[str_i])
-	{
-		if ((str[str_i] >= 'A' && str[str_i] <= 'Z') ||
-			str[str_i] >= 'a' && str[str_i] <= 'z')
-		{
-			rot_i = str[str_i] - 65;
-			num_of_bytes = _putchar(rot13[rot_i]);
-		}
-		else
-			num_of_bytes = _putchar(str[str_i]);
-		str_i++;
-	}
-	return (num_of_bytes);
-}
-
