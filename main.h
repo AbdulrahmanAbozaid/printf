@@ -1,15 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
 #include <stdarg.h>
+#include <stdio.h>
 #include <unistd.h>
-#include <limits.h>
-#include <stdlib.h>
 
 #define OUTPUT_BUF_SIZE 1024
 #define BUF_FLUSH -1
-#define UNUSED(x) ((void)(x))
+#define UNUSED(x) (void)(x)
 #define NULL_STRING "(null)"
 
 
