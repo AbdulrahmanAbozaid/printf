@@ -38,3 +38,18 @@ char *convert(long int num, int base)
 	return (p_str);
 }
 
+
+/**
+ * print_binary - prints binary
+ * @ap: args
+ * Return: num of byes
+ */
+
+int print_binary(va_list ap)
+{
+	unsigned int bin = va_arg(ap, unsigned int);
+	char *str = convert(bin, 2);
+	int num_of_bytes = 0;
+
+	return (num_of_bytes += print_number(str));
+}
