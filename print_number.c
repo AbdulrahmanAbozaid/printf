@@ -36,7 +36,7 @@ int _strlen(char *s)
 
 int print_number(char *str)
 {
-	unsigned int num_of_bytes = 0, len = _strlen(str);
+	unsigned int num_of_bytes = 0;
 
 	num_of_bytes += _puts(str);
 	return (num_of_bytes);
