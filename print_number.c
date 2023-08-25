@@ -41,3 +41,4 @@ int print_number(char *str)
 	num_of_bytes += _puts(str);
 	return (num_of_bytes);
 }
+

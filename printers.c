@@ -58,3 +58,4 @@ int print_percent(va_list ap)
 	(void)ap;
 	return (_putchar('%'));
 }
+

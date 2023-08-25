@@ -38,3 +38,4 @@ int _putchar(char c)
 		buff[i++] = c;
 	return (1);
 }
+

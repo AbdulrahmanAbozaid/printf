@@ -44,3 +44,4 @@ int get_print_func(char *s, va_list ap)
 		return (func(ap));
 	return (0);
 }
+
