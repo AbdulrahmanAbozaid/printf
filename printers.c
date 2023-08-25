@@ -59,3 +59,38 @@ int print_percent(va_list ap)
 	return (_putchar('%'));
 }
 
+/**
+ * print_S - custom spec
+ * @ap: args
+ * Return: length
+ */
+
+
+int print_S(va_list ap)
+{
+	char *str = va_arg(ap, char *);
+	char *hex;
+	int num_of_bytes = 0;
+
+	if ((int)(!str))
+		return (_puts(NULL_STRING));
+	for (; *str; str++)
+	{
+		if ((*str > 0 && *str < 32) || (*str >= 127))
+		{
+			num_of_bytes += _putchar('\\');
+			num_of_bytes += _putchar('x');
+			hex = convert(*str, 16);
+			if (!hex[1])
+				num_of_bytes += _putchar('0');
+			num_of_bytes += _puts(hex);
+		}
+		else
+		{
+			num_of_bytes += _putchar(*str);
+		}
+	}
+
+	return (num_of_bytes);
+}
+
